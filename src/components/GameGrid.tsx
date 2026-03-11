@@ -6,11 +6,14 @@ import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkeleton from "./GameCardSkeleton";
 
+// LOOK AT USEGAMES.TS HOOK
+
+
 interface Props {
   gameQuery: GameQuery;
 }
 
-const GameGrid = ({ gameQuery }: Props) => {
+const GameGrid = ({ gameQuery }: Props) => { 
   const { data, error, isLoading } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6];
 

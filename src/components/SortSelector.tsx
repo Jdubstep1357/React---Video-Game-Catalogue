@@ -8,6 +8,7 @@ interface Props {
 
 const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
   const sortOrders = [
+    // label is text. value is what happens when button is pressed
     { value: "", label: "Relevance" },
     { value: "-added", label: "Date added" },
     { value: "name", label: "Name" },
@@ -25,6 +26,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
       </MenuButton>
       <MenuList>
         {sortOrders.map((order) => (
+          // This is what happens when a user clicks on a button and displays things
           <MenuItem onClick={() => onSelectSortOrder(order.value)} key={order.value} value={order.value}>
             {order.label}
           </MenuItem>

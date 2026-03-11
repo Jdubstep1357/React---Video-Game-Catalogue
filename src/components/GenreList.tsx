@@ -20,6 +20,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
 
   if (error) return null;
 
+  // No spinner due to it data being sent to cache
   if (isLoading) return <Spinner />;
 
   return (
